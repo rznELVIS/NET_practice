@@ -16,8 +16,7 @@ namespace Async
 
             for (int i = 0; i < count; i++)
             {
-                var param = i;
-                threads[i] = new Thread(() => Do(param));
+                threads[i] = new Thread(() => Do(i));
             }
 
             foreach (Thread thread in threads)
