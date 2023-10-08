@@ -1,8 +1,9 @@
 ﻿using System;
+using System;
 namespace Async
 {
-	public class ImmediateThreadRunner : ThreadsRunner
-	{
+    public class ImmediateThreadRunner : ThreadsRunner
+    {
         protected override void PrintInfo()
         {
             Console.WriteLine("Запускаме потоки сразу после создания.");
@@ -18,4 +19,6 @@ namespace Async
         }
     }
 }
+
+
 
