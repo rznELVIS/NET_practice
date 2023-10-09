@@ -1,8 +1,7 @@
-﻿using System;
-namespace Async
+﻿namespace Async.Threads
 {
-	public class ImmediateThreadRunnerWithParamCopy : ThreadsRunner
-	{
+    public class ImmediateThreadRunnerWithParamCopy : ThreadsRunner
+    {
         protected override void PrintInfo()
         {
             Console.WriteLine("Запускаме потоки сразу после создания, но копируем параметр.");

@@ -1,6 +1,4 @@
-﻿using System;
-using System;
-namespace Async
+﻿namespace Async.Threads
 {
     public class ImmediateThreadRunner : ThreadsRunner
     {

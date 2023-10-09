@@ -1,5 +1,6 @@
 ﻿using System;
-namespace Async
+
+namespace Async.Tasks
 {
     public class ImmediateTaskRunner : ThreadsRunner
     {

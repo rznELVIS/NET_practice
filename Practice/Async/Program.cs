@@ -1,4 +1,4 @@
-﻿using Async;
+﻿using Async.Tasks;
 
 Console.WriteLine("Practice Async is started...");
 

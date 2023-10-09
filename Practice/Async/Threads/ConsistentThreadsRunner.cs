@@ -1,10 +1,7 @@
-﻿using System;
-using System.Threading;
-
-namespace Async
+﻿namespace Async.Threads
 {
-	public class ConsistentThreadRunner : ThreadsRunner
-	{
+    public class ConsistentThreadRunner : ThreadsRunner
+    {
         protected override void PrintInfo()
         {
             Console.WriteLine("Запускаме потоки последовательно, после создания.");
@@ -12,7 +9,7 @@ namespace Async
 
         protected override void RunThreads(int count)
         {
-            Thread[] threads = new Thread[count];   
+            Thread[] threads = new Thread[count];
 
             for (int i = 0; i < count; i++)
             {
