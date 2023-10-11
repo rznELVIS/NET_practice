@@ -1,4 +1,5 @@
-﻿using Async.Tasks;
+﻿using Async.AsyncAwait;
+using Async.Tasks;
 
 Console.WriteLine("Practice Async is started...");
 
@@ -18,7 +19,7 @@ consistentThreadRunner.Run(5);
 Thread.Sleep(300);
 
 var consistentThreadRunnerWithParamCopy = new ConsistentThreadRunnerWithParamCopy();
-consistentThreadRunnerWithParamCopy.Run(20);*/
+consistentThreadRunnerWithParamCopy.Run(20);
 
 Thread.Sleep(300);
 
@@ -38,7 +39,12 @@ consistentTaskRunner.Run(10);
 Thread.Sleep(300);
 
 var consistentTaskRunnerWithParamCopy = new ConsistentTaskRunnerWithParamCopy();
-consistentTaskRunnerWithParamCopy.Run(10);
+consistentTaskRunnerWithParamCopy.Run(10); */
+
+var asyncRunner = new AsyncRunner();
+await asyncRunner.Run();
+
+Console.WriteLine("Async вызван.");
 
 Console.ReadLine();
 
