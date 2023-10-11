@@ -30,6 +30,16 @@ Thread.Sleep(300);
 var immediateTaskRunnerWithParamCopy = new ImmediateTaskRunnerWithParamCopy();
 immediateTaskRunnerWithParamCopy.Run(10);
 
+Thread.Sleep(300);
+
+var consistentTaskRunner = new ConsistentTaskRunner();
+consistentTaskRunner.Run(10);
+
+Thread.Sleep(300);
+
+var consistentTaskRunnerWithParamCopy = new ConsistentTaskRunnerWithParamCopy();
+consistentTaskRunnerWithParamCopy.Run(10);
+
 Console.ReadLine();
 
 Console.WriteLine("Practice Async is ended...");

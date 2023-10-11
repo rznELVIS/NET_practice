@@ -11,14 +11,14 @@
             RunThreads(count);
         }
 
-        protected abstract void PrintInfo();
-
-        protected virtual void RunThreads(int count) { }
-
         protected void Do(int number)
         {
             Console.WriteLine($"Поток номер {number}. Id потока {Thread.CurrentThread.ManagedThreadId}");
         }
+
+        protected abstract void PrintInfo();
+
+        protected abstract void RunThreads(int count);
     }
 }
 
