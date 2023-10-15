@@ -1,4 +1,5 @@
-﻿using Async.AsyncAwait;
+﻿using System.Threading.Tasks;
+using Async.AsyncAwait;
 using Async.Tasks;
 
 Console.WriteLine("Practice Async is started...");
@@ -41,7 +42,7 @@ Thread.Sleep(300);
 var consistentTaskRunnerWithParamCopy = new ConsistentTaskRunnerWithParamCopy();
 consistentTaskRunnerWithParamCopy.Run(10); */
 
-var asyncRunnerWithAsync = new AsyncRunnerWithAwait();
+/*var asyncRunnerWithAsync = new AsyncRunnerWithAwait();
 var task = asyncRunnerWithAsync.Run();
 Console.WriteLine($"Задача: {task}");
 await task;
@@ -59,7 +60,13 @@ asyncRunnerWithoutAsyncAndAwait.Run();
 Thread.Sleep(3000);
 
 var asyncRunnerWithAwaitAndVoid = new AsyncRunnerWithAwaitAndVoid();
-asyncRunnerWithAwaitAndVoid.Run();
+asyncRunnerWithAwaitAndVoid.Run();*/
+
+Thread.Sleep(3000);
+
+var asyncRunnerWithSeveralAwait = new AsyncRunnerWithSeveralAwait();
+var res = asyncRunnerWithSeveralAwait.Run();
+Console.WriteLine($"Task Id: {res.Id}");
 
 Console.ReadLine();
 
