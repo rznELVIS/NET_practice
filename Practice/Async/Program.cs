@@ -41,10 +41,25 @@ Thread.Sleep(300);
 var consistentTaskRunnerWithParamCopy = new ConsistentTaskRunnerWithParamCopy();
 consistentTaskRunnerWithParamCopy.Run(10); */
 
-var asyncRunner = new AsyncRunner();
-await asyncRunner.Run();
+var asyncRunnerWithAsync = new AsyncRunnerWithAwait();
+var task = asyncRunnerWithAsync.Run();
+Console.WriteLine($"Задача: {task}");
+await task;
 
-Console.WriteLine("Async вызван.");
+Thread.Sleep(3000);
+
+var asyncRunnerWithoutAsync = new AsyncRunnerWithoutAwait();
+await asyncRunnerWithoutAsync.Run();
+
+Thread.Sleep(3000);
+
+var asyncRunnerWithoutAsyncAndAwait = new AsyncRunnerWithoutAwaitAndAsync();
+asyncRunnerWithoutAsyncAndAwait.Run();
+
+Thread.Sleep(3000);
+
+var asyncRunnerWithAwaitAndVoid = new AsyncRunnerWithAwaitAndVoid();
+asyncRunnerWithAwaitAndVoid.Run();
 
 Console.ReadLine();
 
