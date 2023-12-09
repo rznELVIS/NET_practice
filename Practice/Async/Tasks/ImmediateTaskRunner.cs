@@ -6,7 +6,7 @@ namespace Async.Tasks
     {
         protected override void PrintInfo()
         {
-            Console.WriteLine("Запускаме таски сразу после создания.");
+            Console.WriteLine("Запускаем таски сразу после создания.");
         }
 
         protected override void RunThreads(int count)

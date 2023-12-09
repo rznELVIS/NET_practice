@@ -18,7 +18,8 @@
                 task.Start();
             }
 
-            Task.WaitAll(tasks);
+            await tasks[1];
+            // Task.WaitAll(tasks);
 
             Console.WriteLine("Окончание метода Async");
         }

@@ -13,6 +13,7 @@
 
         protected void Do(int number)
         {
+            //Thread.Sleep(100);
             Console.WriteLine($"Поток номер {number}. Id потока {Thread.CurrentThread.ManagedThreadId}");
         }
 
